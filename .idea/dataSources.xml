@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="4119611790">
+    <data-source source="LOCAL" name="MySQL - Eleve@localhost" uuid="93e7b001-c3f2-4706-b73c-20666f8eef5f">
+      <driver-ref>mysql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/Eleve</jdbc-url>
+      <user-name>root</user-name>
+      <user-password>dfd8dfc5dfc5dfde</user-password>
+      <schema-pattern>Eleve.*</schema-pattern>
+      <driver-properties>
+        <property name="zeroDateTimeBehavior" value="convertToNull" />
+        <property name="tinyInt1isBit" value="false" />
+      </driver-properties>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+

@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.springapp.LogsEntity" table="logs" schema="" catalog="Eleve">
+        <id name="idLog">
+            <column name="idLog" sql-type="int" length="10" not-null="true"/>
+        </id>
+        <property name="precofinal">
+            <column name="precofinal" sql-type="int" length="10"/>
+        </property>
+        <many-to-one name="corByCor" class="com.springapp.CorEntity">
+            <column name="cor"/>
+        </many-to-one>
+        <many-to-one name="descontoByDesconto" class="com.springapp.DescontoEntity">
+            <column name="desconto"/>
+        </many-to-one>
+        <many-to-one name="entradaByEntrada" class="com.springapp.EntradaEntity">
+            <column name="entrada"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>

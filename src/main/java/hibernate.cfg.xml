@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="connection.url">jdbc:mysql://localhost:3306/Eleve</property>
+    <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="connection.username">root</property>
+    <property name="connection.password">root</property>
+      <mapping resource="com/springapp/CorEntity.hbm.xml"/>
+      <mapping class="com.springapp.CorEntity"/>
+      <mapping resource="com/springapp/DescontoEntity.hbm.xml"/>
+      <mapping class="com.springapp.DescontoEntity"/>
+      <mapping resource="com/springapp/EntradaEntity.hbm.xml"/>
+      <mapping class="com.springapp.EntradaEntity"/>
+      <mapping class="com.springapp.LogsEntity"/>
+      <mapping resource="com/springapp/LogsEntity.hbm.xml"/>
+      <mapping class="com.springapp.ModeloEntity"/>
+      <mapping resource="com/springapp/ModeloEntity.hbm.xml"/>
+      <mapping resource="com/springapp/PrecoEntity.hbm.xml"/>
+      <mapping class="com.springapp.PrecoEntity"/>
+      <mapping class="com.springapp.ReferenciaEntity"/>
+      <mapping resource="com/springapp/ReferenciaEntity.hbm.xml"/>
+      <mapping class="com.springapp.TamanhoEntity"/>
+      <mapping resource="com/springapp/TamanhoEntity.hbm.xml"/>
+      <!-- DB schema will be updated if needed -->
+    <!-- <property name="hbm2ddl.auto">update</property> -->
+  </session-factory>
+</hibernate-configuration>

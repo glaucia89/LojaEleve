@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.springapp.EntradaEntity" table="entrada" schema="" catalog="Eleve">
+        <id name="id">
+            <column name="id" sql-type="int" length="10" not-null="true"/>
+        </id>
+        <property name="entrada">
+            <column name="entrada" sql-type="varchar" length="45"/>
+        </property>
+    </class>
+</hibernate-mapping>

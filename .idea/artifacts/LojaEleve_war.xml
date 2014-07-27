@@ -3,6 +3,12 @@
     <output-path>$PROJECT_DIR$/target</output-path>
     <root id="archive" name="LojaEleve.war">
       <element id="artifact" artifact-name="LojaEleve:war exploded" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="lib">
+          <element id="library" level="application" name="com.mysql.jdbc:com.springsource.com.mysql.jdbc:5.1.6" />
+          <element id="library" level="project" name="Hibernate 4.2.2-4.2.2" />
+        </element>
+      </element>
     </root>
   </artifact>
 </component>
