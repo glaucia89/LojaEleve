@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="MySQL - Eleve@localhost" uuid="93e7b001-c3f2-4706-b73c-20666f8eef5f">
+    <database-info product="MySQL" version="5.5.37-0ubuntu0.13.10.1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.31 ( Revision: alexander.soklakov@oracle.com-20140520065950-groqzzbvxprqdmnz )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
+    <schema name="" catalog="Eleve"/>
+    <table name="cor" schema="" catalog="Eleve" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="cor" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="fk_cor" table="logs" schema="" catalog="Eleve" columns="cor"/>
+    </table>
+    <table name="desconto" schema="" catalog="Eleve" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="desconto" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="fk_desconto" table="logs" schema="" catalog="Eleve" columns="desconto"/>
+    </table>
+    <table name="entrada" schema="" catalog="Eleve" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="entrada" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="fk_entrada" table="logs" schema="" catalog="Eleve" columns="entrada"/>
+    </table>
+    <table name="logs" schema="" catalog="Eleve" type="TABLE">
+      <column name="idLog" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="modelo" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="tamanho" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="cor" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="referencia" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="preco" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="desconto" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="entrada" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <column name="precofinal" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4"/>
+      <primary-key name="PRIMARY" columns="idLog"/>
+      <foreign-key name="fk_modelo" columns="modelo" ref-table="modelo" ref-schema="" ref-catalog="Eleve" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="fk_tamanho" columns="tamanho" ref-table="tamanho" ref-schema="" ref-catalog="Eleve" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="fk_cor" columns="cor" ref-table="cor" ref-schema="" ref-catalog="Eleve" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="fk_referencia" columns="referencia" ref-table="referencia" ref-schema="" ref-catalog="Eleve" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="fk_preco" columns="preco" ref-table="preco" ref-schema="" ref-catalog="Eleve" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="fk_desconto" columns="desconto" ref-table="desconto" ref-schema="" ref-catalog="Eleve" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <foreign-key name="fk_entrada" columns="entrada" ref-table="entrada" ref-schema="" ref-catalog="Eleve" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
+      <index name="fk_cor_idx" unique="false" columns="cor"/>
+      <index name="fk_desconto_idx" unique="false" columns="desconto"/>
+      <index name="fk_entrada_idx" unique="false" columns="entrada,referencia"/>
+      <index name="fk_modelo_idx" unique="false" columns="modelo"/>
+      <index name="fk_preco_idx" unique="false" columns="preco"/>
+      <index name="fk_referencia_idx" unique="false" columns="referencia"/>
+      <index name="fk_tamanho_idx" unique="false" columns="tamanho"/>
+    </table>
+    <table name="modelo" schema="" catalog="Eleve" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="modelo" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="fk_modelo" table="logs" schema="" catalog="Eleve" columns="modelo"/>
+    </table>
+    <table name="preco" schema="" catalog="Eleve" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="preco" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="fk_preco" table="logs" schema="" catalog="Eleve" columns="preco"/>
+    </table>
+    <table name="referencia" schema="" catalog="Eleve" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4"/>
+      <column name="referencia" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="fk_referencia" table="logs" schema="" catalog="Eleve" columns="referencia"/>
+    </table>
+    <table name="tamanho" schema="" catalog="Eleve" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" remarks="CQ=="/>
+      <column name="tamanho" sqlType="VARCHAR" length="45" precision="0" nullable="true" jdbcType="12"/>
+      <primary-key name="PRIMARY" columns="id"/>
+      <exported-key name="fk_tamanho" table="logs" schema="" catalog="Eleve" columns="tamanho"/>
+    </table>
+  </data-source>
+</component>
