@@ -1,4 +1,4 @@
-package com.springapp;
+package com.springapp.model;
 
 import javax.persistence.*;
 
@@ -6,10 +6,10 @@ import javax.persistence.*;
  * Created by glaucia on 27/07/14.
  */
 @Entity
-@Table(name = "entrada", schema = "", catalog = "Eleve")
-public class EntradaEntity {
+@Table(name = "preco", schema = "", catalog = "Eleve")
+public class PrecoEntity {
     private int id;
-    private String entrada;
+    private String preco;
 
     @Id
     @Column(name = "id", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
@@ -22,13 +22,13 @@ public class EntradaEntity {
     }
 
     @Basic
-    @Column(name = "entrada", nullable = true, insertable = true, updatable = true, length = 45, precision = 0)
-    public String getEntrada() {
-        return entrada;
+    @Column(name = "preco", nullable = true, insertable = true, updatable = true, length = 45, precision = 0)
+    public String getPreco() {
+        return preco;
     }
 
-    public void setEntrada(String entrada) {
-        this.entrada = entrada;
+    public void setPreco(String preco) {
+        this.preco = preco;
     }
 
     @Override
@@ -36,10 +36,10 @@ public class EntradaEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        EntradaEntity that = (EntradaEntity) o;
+        PrecoEntity that = (PrecoEntity) o;
 
         if (id != that.id) return false;
-        if (entrada != null ? !entrada.equals(that.entrada) : that.entrada != null) return false;
+        if (preco != null ? !preco.equals(that.preco) : that.preco != null) return false;
 
         return true;
     }
@@ -47,7 +47,7 @@ public class EntradaEntity {
     @Override
     public int hashCode() {
         int result = id;
-        result = 31 * result + (entrada != null ? entrada.hashCode() : 0);
+        result = 31 * result + (preco != null ? preco.hashCode() : 0);
         return result;
     }
 }

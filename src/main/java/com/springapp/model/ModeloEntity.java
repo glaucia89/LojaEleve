@@ -1,4 +1,4 @@
-package com.springapp;
+package com.springapp.model;
 
 import javax.persistence.*;
 
@@ -6,10 +6,10 @@ import javax.persistence.*;
  * Created by glaucia on 27/07/14.
  */
 @Entity
-@Table(name = "cor", schema = "", catalog = "Eleve")
-public class CorEntity {
+@Table(name = "modelo", schema = "", catalog = "Eleve")
+public class ModeloEntity {
     private int id;
-    private String cor;
+    private String modelo;
 
     @Id
     @Column(name = "id", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
@@ -22,13 +22,13 @@ public class CorEntity {
     }
 
     @Basic
-    @Column(name = "cor", nullable = true, insertable = true, updatable = true, length = 45, precision = 0)
-    public String getCor() {
-        return cor;
+    @Column(name = "modelo", nullable = true, insertable = true, updatable = true, length = 45, precision = 0)
+    public String getModelo() {
+        return modelo;
     }
 
-    public void setCor(String cor) {
-        this.cor = cor;
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
     }
 
     @Override
@@ -36,10 +36,10 @@ public class CorEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        CorEntity corEntity = (CorEntity) o;
+        ModeloEntity that = (ModeloEntity) o;
 
-        if (id != corEntity.id) return false;
-        if (cor != null ? !cor.equals(corEntity.cor) : corEntity.cor != null) return false;
+        if (id != that.id) return false;
+        if (modelo != null ? !modelo.equals(that.modelo) : that.modelo != null) return false;
 
         return true;
     }
@@ -47,7 +47,7 @@ public class CorEntity {
     @Override
     public int hashCode() {
         int result = id;
-        result = 31 * result + (cor != null ? cor.hashCode() : 0);
+        result = 31 * result + (modelo != null ? modelo.hashCode() : 0);
         return result;
     }
 }

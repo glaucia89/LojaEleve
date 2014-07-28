@@ -1,4 +1,4 @@
-package com.springapp;
+package com.springapp.model;
 
 import javax.persistence.*;
 
@@ -6,10 +6,10 @@ import javax.persistence.*;
  * Created by glaucia on 27/07/14.
  */
 @Entity
-@Table(name = "referencia", schema = "", catalog = "Eleve")
-public class ReferenciaEntity {
+@Table(name = "entrada", schema = "", catalog = "Eleve")
+public class EntradaEntity {
     private int id;
-    private String referencia;
+    private String entrada;
 
     @Id
     @Column(name = "id", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
@@ -22,13 +22,13 @@ public class ReferenciaEntity {
     }
 
     @Basic
-    @Column(name = "referencia", nullable = true, insertable = true, updatable = true, length = 45, precision = 0)
-    public String getReferencia() {
-        return referencia;
+    @Column(name = "entrada", nullable = true, insertable = true, updatable = true, length = 45, precision = 0)
+    public String getEntrada() {
+        return entrada;
     }
 
-    public void setReferencia(String referencia) {
-        this.referencia = referencia;
+    public void setEntrada(String entrada) {
+        this.entrada = entrada;
     }
 
     @Override
@@ -36,10 +36,10 @@ public class ReferenciaEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        ReferenciaEntity that = (ReferenciaEntity) o;
+        EntradaEntity that = (EntradaEntity) o;
 
         if (id != that.id) return false;
-        if (referencia != null ? !referencia.equals(that.referencia) : that.referencia != null) return false;
+        if (entrada != null ? !entrada.equals(that.entrada) : that.entrada != null) return false;
 
         return true;
     }
@@ -47,7 +47,7 @@ public class ReferenciaEntity {
     @Override
     public int hashCode() {
         int result = id;
-        result = 31 * result + (referencia != null ? referencia.hashCode() : 0);
+        result = 31 * result + (entrada != null ? entrada.hashCode() : 0);
         return result;
     }
 }

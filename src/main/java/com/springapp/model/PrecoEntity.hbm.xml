@@ -4,12 +4,12 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="com.springapp.DescontoEntity" table="desconto" schema="" catalog="Eleve">
+    <class name="com.springapp.model.PrecoEntity" table="preco" schema="" catalog="Eleve">
         <id name="id">
             <column name="id" sql-type="int" length="10" not-null="true"/>
         </id>
-        <property name="desconto">
-            <column name="desconto" sql-type="varchar" length="45"/>
+        <property name="preco">
+            <column name="preco" sql-type="varchar" length="45"/>
         </property>
     </class>
 </hibernate-mapping>

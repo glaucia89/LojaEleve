@@ -1,4 +1,4 @@
-package com.springapp;
+package com.springapp.model;
 
 import javax.persistence.*;
 
@@ -6,10 +6,10 @@ import javax.persistence.*;
  * Created by glaucia on 27/07/14.
  */
 @Entity
-@Table(name = "modelo", schema = "", catalog = "Eleve")
-public class ModeloEntity {
+@Table(name = "referencia", schema = "", catalog = "Eleve")
+public class ReferenciaEntity {
     private int id;
-    private String modelo;
+    private String referencia;
 
     @Id
     @Column(name = "id", nullable = false, insertable = true, updatable = true, length = 10, precision = 0)
@@ -22,13 +22,13 @@ public class ModeloEntity {
     }
 
     @Basic
-    @Column(name = "modelo", nullable = true, insertable = true, updatable = true, length = 45, precision = 0)
-    public String getModelo() {
-        return modelo;
+    @Column(name = "referencia", nullable = true, insertable = true, updatable = true, length = 45, precision = 0)
+    public String getReferencia() {
+        return referencia;
     }
 
-    public void setModelo(String modelo) {
-        this.modelo = modelo;
+    public void setReferencia(String referencia) {
+        this.referencia = referencia;
     }
 
     @Override
@@ -36,10 +36,10 @@ public class ModeloEntity {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        ModeloEntity that = (ModeloEntity) o;
+        ReferenciaEntity that = (ReferenciaEntity) o;
 
         if (id != that.id) return false;
-        if (modelo != null ? !modelo.equals(that.modelo) : that.modelo != null) return false;
+        if (referencia != null ? !referencia.equals(that.referencia) : that.referencia != null) return false;
 
         return true;
     }
@@ -47,7 +47,7 @@ public class ModeloEntity {
     @Override
     public int hashCode() {
         int result = id;
-        result = 31 * result + (modelo != null ? modelo.hashCode() : 0);
+        result = 31 * result + (referencia != null ? referencia.hashCode() : 0);
         return result;
     }
 }

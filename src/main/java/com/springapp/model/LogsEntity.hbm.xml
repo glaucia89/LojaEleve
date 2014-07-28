@@ -4,20 +4,20 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="com.springapp.LogsEntity" table="logs" schema="" catalog="Eleve">
+    <class name="com.springapp.model.LogsEntity" table="logs" schema="" catalog="Eleve">
         <id name="idLog">
             <column name="idLog" sql-type="int" length="10" not-null="true"/>
         </id>
         <property name="precofinal">
             <column name="precofinal" sql-type="int" length="10"/>
         </property>
-        <many-to-one name="corByCor" class="com.springapp.CorEntity">
+        <many-to-one name="corByCor" class="com.springapp.model.CorEntity">
             <column name="cor"/>
         </many-to-one>
-        <many-to-one name="descontoByDesconto" class="com.springapp.DescontoEntity">
+        <many-to-one name="descontoByDesconto" class="com.springapp.model.DescontoEntity">
             <column name="desconto"/>
         </many-to-one>
-        <many-to-one name="entradaByEntrada" class="com.springapp.EntradaEntity">
+        <many-to-one name="entradaByEntrada" class="com.springapp.model.EntradaEntity">
             <column name="entrada"/>
         </many-to-one>
     </class>
